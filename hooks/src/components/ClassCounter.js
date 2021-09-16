@@ -26,3 +26,6 @@ class ClassCounter extends Component {
 }
 
 export default ClassCounter;
+
+// こっちはHookCounter.jsとは異なり、Hooksを利用しないで書いてるptとなる。
+// this.stateにてカウントを0にセットし、incrementCount変数のsetCount定義によってカウント回数が増えていく算段となっている。
