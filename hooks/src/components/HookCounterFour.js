@@ -4,8 +4,7 @@ function HookCounterFour() {
   const [name,setName]= useState({firstName: '', lastName: ''})
 
   return (
-   <div>
-     <form>
+    <section>
       <input
           type="text"
           value={name.firstName}
@@ -16,11 +15,12 @@ function HookCounterFour() {
       <h2>Your first name is - {name.firstName}</h2>
       <h2>Your last  name is - {name.lastName}</h2>
       <h2>{JSON.stringify(name)}</h2>
-
-     </form>
-   </div>
+    </section>
   )
 
 }
 
 export default HookCounterFour
+
+// input内のvalueにて入れる名前を入力し、onchangeメソッドにて入力内容イベントが発火され、
+// 実際の{name.firstname}の中にプロパティとして代入される。
