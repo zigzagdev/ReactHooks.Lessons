@@ -16,7 +16,7 @@ function HookMouse() {
 
       return () => {
        console.log('Component unmounting code')
-       window.removeEventListener('mousesove',logMousePosition)
+       window.removeEventListener('mousemove',logMousePosition)
       }
   }, [])
 
@@ -30,3 +30,5 @@ function HookMouse() {
 export default HookMouse
 
 // useStateを変数にて利用したい場合、必ずベースとなる変数をその変数にsetをつけた二つの変数を必ず用いること。(ex x setX)
+// また、useEffect内ではイベントの着火に伴い、そのイベントのケツを持たせないと永遠にイベントがはっせいしてしまう可能性があるから、
+// return内でそのイベントの終了を表している。
