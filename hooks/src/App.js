@@ -1,19 +1,21 @@
 import React from 'react'
-import './App.css';
-import ClassCounter from "./components/ClassCounter";
-// import HookCounter from "./components/HookCounter";
-import HookCounterThree from "./components/HookCounterThree";
-import HookCounterFour from "./components/HookCounterFour";
+import './App.css'
+import ComponentC from "./components/ComponentC";
+export  const UserContext = React.createContext()
+export  const ChannelContext = React.createContext()
+
 
 function App() {
-  return (
-    <div className="App">
-      {/*<ClassCounter/>*/}
-      {/*<HookCounter/>*/}
-      {/*<HookCounterThree/>*/}
-      <HookCounterFour/>
-    </div>
-  );
+ return (
+  <div className='App'>
+    <UserContext.Provider value= {' Matthew '}>
+        <ChannelContext.Provider value= {'fuck'}>
+            <ComponentC/>
+        </ChannelContext.Provider>
+    </UserContext.Provider>
+  </div>
+ )
+
 }
 
-export default App;
+export default App
