@@ -25,7 +25,7 @@ function App() {
     {/*<IntervalHookCounter/>*/}
     {/*<DataFetching/>*/}
     <UserContext.Provider value= {' Matthew '}>
-        <ChannelContext.Provider value= {' test '}>
+        <ChannelContext.Provider value= {'fuck'}>
             <ComponentC/>
         </ChannelContext.Provider>
     </UserContext.Provider>
