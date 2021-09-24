@@ -3,8 +3,12 @@ import axios from "axios";
 
 function DataFetching() {
     const [post,setPost] = useState({})
-    const [id, setId] =useState(1)
-    const [idFromButtonClick,setIdFromButtonClick] = useState(1)
+    //{}は形として覚えておけば良い。 ないとエラーを吐く為。
+    const [id, setId] =useState()
+    //このuseStateに引数を入れないと画面上にはデフォルトとして何も表記されない。
+    const [idFromButtonClick,setIdFromButtonClick] = useState()
+    //このuseStateに引数を入れないと画面上にはデフォルトとして何も表記されない。
+
     const handleClick = () => {
         setIdFromButtonClick(id)
     }
