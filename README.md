@@ -1,141 +1,75 @@
-# ![RealWorld Example Applications](media/realworld-dual-mode.png)
+# [React](https://reactjs.org/) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/main/LICENSE) [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react) [![CircleCI Status](https://circleci.com/gh/facebook/react.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/facebook/react) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://reactjs.org/docs/how-to-contribute.html#your-first-pull-request)
 
-### Stay on the bleeding edge — [join our GitHub Discussions!](https://github.com/gothinkster/realworld/discussions) 🎉
+React is a JavaScript library for building user interfaces.
 
-<p align="center" style="margin-top: 30px;">
-<img src="media/stacks_hr.gif"  />
-</p>
+* **Declarative:** React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes. Declarative views make your code more predictable, simpler to understand, and easier to debug.
+* **Component-Based:** Build encapsulated components that manage their own state, then compose them to make complex UIs. Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the DOM.
+* **Learn Once, Write Anywhere:** We don't make assumptions about the rest of your technology stack, so you can develop new features in React without rewriting existing code. React can also render on the server using Node and power mobile apps using [React Native](https://reactnative.dev/).
 
-<a href="https://demo.realworld.io/"><img src="media/conduit_l.png" align="right" width="250px" /></a>
+[Learn how to use React in your own project](https://reactjs.org/docs/getting-started.html).
 
-### See how *the exact same* Medium.com clone (called [Conduit](https://demo.realworld.io)) is built using different [frontends](https://codebase.show/projects/realworld?category=frontend) and [backends](https://codebase.show/projects/realworld?category=backend). Yes, you can mix and match them, because **they all adhere to the same [API spec](spec/)** 😮😎
+## Installation
 
-While most "todo" demos provide an excellent cursory glance at a framework's capabilities, they typically don't convey the knowledge & perspective required to actually build _real_ applications with it.
+React has been designed for gradual adoption from the start, and **you can use as little or as much React as you need**:
 
-RealWorld solves this by allowing you to choose any frontend (React, Angular 2, & more) and any backend (Node, Django, & more) and see how they power a real world, beautifully designed fullstack app called "[Conduit](https://demo.realworld.io)".
+* Use [Online Playgrounds](https://reactjs.org/docs/getting-started.html#online-playgrounds) to get a taste of React.
+* [Add React to a Website](https://reactjs.org/docs/add-react-to-a-website.html) as a `<script>` tag in one minute.
+* [Create a New React App](https://reactjs.org/docs/create-a-new-react-app.html) if you're looking for a powerful JavaScript toolchain.
 
-*Read the [full blog post announcing RealWorld on Medium.](https://medium.com/@ericsimons/introducing-realworld-6016654d36b5)*
+You can use React as a `<script>` tag from a [CDN](https://reactjs.org/docs/cdn-links.html), or as a `react` package on [npm](https://www.npmjs.com/package/react).
 
-# Implementations
+## Documentation
 
-Over 100 implementations have been created using various languages, libraries, and frameworks.
+You can find the React documentation [on the website](https://reactjs.org/docs).  
 
-[**See the list of implementations on the CodebaseShow website >>>**](https://codebase.show/projects/realworld)
+Check out the [Getting Started](https://reactjs.org/docs/getting-started.html) page for a quick overview.
 
-# Create a new implementation
+The documentation is divided into several sections:
 
-[**Create a new implementation >>>**](/spec)
+* [Tutorial](https://reactjs.org/tutorial/tutorial.html)
+* [Main Concepts](https://reactjs.org/docs/hello-world.html)
+* [Advanced Guides](https://reactjs.org/docs/jsx-in-depth.html)
+* [API Reference](https://reactjs.org/docs/react-api.html)
+* [Where to Get Support](https://reactjs.org/community/support.html)
+* [Contributing Guide](https://reactjs.org/docs/how-to-contribute.html)
 
-Or you can [view upcoming implementations (WIPs)](https://github.com/gothinkster/realworld/discussions/categories/wip-implementations).
+You can improve it by sending pull requests to [this repository](https://github.com/reactjs/reactjs.org).
 
-# How do I get up & running?
+## Examples
 
-Follow the instructions in the README of whatever frontend and/or backend repo's you want to get up and running.
+We have several examples [on the website](https://reactjs.org/). Here is the first one to get you started:
 
-### Can you teach me how to build each stack from scratch?
+```jsx
+function HelloMessage({ name }) {
+  return <div>Hello {name}</div>;
+}
 
-Yup! We've built step-by-step tutorials for all of our stacks that teach you how to go from `git init` all the way to the production ready application. [**Start learning now >>>**](https://thinkster.io/tutorials/fullstack)
+ReactDOM.render(
+  <HelloMessage name="Taylor" />,
+  document.getElementById('container')
+);
+```
 
-# Community created resources
+This example will render "Hello Taylor" into a container on the page.
 
-Forks, tutorials, workshops, and other resources based on the RealWorld project:
+You'll notice that we used an HTML-like syntax; [we call it JSX](https://reactjs.org/docs/introducing-jsx.html). JSX is not required to use React, but it makes code more readable, and writing it feels like writing HTML. If you're using React as a `<script>` tag, read [this section](https://reactjs.org/docs/add-react-to-a-website.html#optional-try-react-with-jsx) on integrating JSX; otherwise, the [recommended JavaScript toolchains](https://reactjs.org/docs/create-a-new-react-app.html) handle it automatically.
 
-- [**React+Redux / Node testing workshop**](https://github.com/kentcdodds/testing-workshop) by [**Kent C. Dodds**](https://github.com/kentcdodds)
-  - Example repo showing the React+Redux and Node stacks working together w/ TDD
-  - Live recording of his workshop is [**available on YouTube**](https://www.youtube.com/watch?v=DdqiXcYDv-8)
-- [**RealWorld React/NodeJS E2E Tests**](https://github.com/anishkny/realworld-e2e-test) by [**Anish Karandikar**](https://github.com/anishkny)
-  - A repo showing how to wire [React](https://github.com/gothinkster/react-redux-realworld-example-app) frontend with [NodeJS](https://github.com/gothinkster/node-express-realworld-example-app) backend for a RealWorld fullstack
-  - Includes E2E integration tests that use [Chrome Puppeteer](https://github.com/GoogleChrome/puppeteer) and [Mocha](https://mochajs.org) and work with CI systems like [Travis CI](https://travis-ci.org/anishkny/realworld-e2e-test) and [CircleCI](https://circleci.com/gh/anishkny/realworld-e2e-test)
-  - Also demonstrates usage of [Greenkeeper](https://greenkeeper.io) for automatic dependency updates and [Snyk](https://snyk.io/) for vulnerability monitoring
-- Performance comparisons:
-  - [A Real-World Comparison of Front-End Frameworks with Benchmarks 2020](https://medium.com/dailyjs/a-realworld-comparison-of-front-end-frameworks-2020-4e50655fe4c1)
-  - [A Real-World Comparison of Front-End Frameworks with Benchmarks 2019](https://medium.freecodecamp.org/a-realworld-comparison-of-front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075)
-  - [A Real-World Comparison of Front-End Frameworks with Benchmarks 2018](https://medium.freecodecamp.org/a-real-world-comparison-of-front-end-frameworks-with-benchmarks-2018-update-e5760fb4a962)
-  - [A Real-World Comparison of Front-End Frameworks with Benchmarks 2017](https://medium.freecodecamp.org/a-real-world-comparison-of-front-end-frameworks-with-benchmarks-e1cb62fd526c)
+## Contributing
 
-# Learn more
+The main purpose of this repository is to continue evolving React core, making it faster and easier to use. Development of React happens in the open on GitHub, and we are grateful to the community for contributing bugfixes and improvements. Read below to learn how you can take part in improving React.
 
-- ["Introducing RealWorld 🙌"](https://medium.com/@ericsimons/introducing-realworld-6016654d36b5) by Eric Simons
-- Every tutorial is built against the same [API spec](api/) to ensure modularity of every frontend & backend
-- Every frontend utilizes the same hand crafted [Bootstrap 4 theme](https://github.com/gothinkster/conduit-bootstrap-template) for identical UI/UX
-- There is a hosted version of the backend API available for public usage, no API keys required
-- Interested in creating a new RealWorld stack? View our [starter guide & spec](/spec)
+### [Code of Conduct](https://code.fb.com/codeofconduct)
 
-# Active Maintainers
+Facebook has adopted a Code of Conduct that we expect project participants to adhere to. Please read [the full text](https://code.fb.com/codeofconduct) so that you can understand what actions will and will not be tolerated.
 
-#### [Gérôme Grignon](https://github.com/geromegrignon) - Maintainer
+### [Contributing Guide](https://reactjs.org/contributing/how-to-contribute.html)
 
-<img align="left" width="40" height="40" src="https://avatars.githubusercontent.com/u/32737308?v=4">
+Read our [contributing guide](https://reactjs.org/contributing/how-to-contribute.html) to learn about our development process, how to propose bugfixes and improvements, and how to build and test your changes to React.
 
-Gérôme is a Software Engineer at Sfeir. He's an open source enthusiast.<br /><br />
+### Good First Issues
 
-#### [Manuel Vila](https://github.com/mvila) - Maintainer
+To help you get your feet wet and get you familiar with our contribution process, we have a list of [good first issues](https://github.com/facebook/react/labels/good%20first%20issue) that contain bugs which have a relatively limited scope. This is a great place to get started.
 
-<img align="left" width="40" height="40" src="https://avatars.githubusercontent.com/u/381671?v=40">
+### License
 
-Manuel is an independent Software Engineer, creator of the [Layr framework](https://layrjs.com) and the [CodebaseShow website](https://codebase.show/).<br /><br />
-
-# Who made this?
-
-RealWorld would not be possible without the [open source community](#special-thanks-to) continuously helping push the project forward. In addition, the former team was composed of:
-
-#### [Anish Karandikar](https://github.com/anishkny) - Core Maintainer
-
-<img align="left" width="40" height="40" src="https://avatars1.githubusercontent.com/u/357499?v=3&s=100">
-
-MathWorker, ex-Google, ex-Computational Fluid Dynamicist, forever lover of tech & humanities ❤️<br /><br />
-
-#### [Cameron Chapman](https://github.com/Cameron-C-Chapman) - Core Maintainer
-
-<img align="left" width="40" height="40" src="https://avatars1.githubusercontent.com/u/1323581?v=3&s=100">
-
-Cameron Chapman is a Software Engineer at FanThreeSixty. He's an open source enthusiast and is helping to teach a local web development boot camp at Kansas University.
-
-#### [Eric Simons](https://twitter.com/ericsimons40) - Founder/Maintainer
-
-<img align="left" width="40" height="40" src="https://avatars1.githubusercontent.com/u/556934?v=3&s=100">
-
-Eric is a Software Engineer, UI Designer, and author of many technical books & tutorials. He oversees the project direction, maintenance and organizes the planning and development efforts of the team.
-
-#### [Albert Pai](https://twitter.com/iamalbertpai) - Founder/Maintainer
-
-<img align="left" width="40" height="40" src="https://avatars0.githubusercontent.com/u/1776432?v=3&s=100">
-
-Albert is a Software Engineer, DevOps ninja, and author of many technical books & tutorials. He oversees the project direction, maintenance and organizes the planning and development efforts of the team.
-
-#### [Thinkster](https://twitter.com/gothinkster) - Funding/Support
-
-<img align="left" width="40" height="40" src="https://avatars0.githubusercontent.com/u/8601733?v=3&s=100">
-
-[Thinkster](https://thinkster.io) creates high quality resources that help Javascript developers succeed. The RealWorld project wouldn't exist without their funding, so please consider investing in [a Pro subscription](https://thinkster.io/pro) to help support us!
-
-#### [James Brewer](https://twitter.com/brwr_) - Admin
-
-<img align="left" width="40" height="40" src="https://avatars1.githubusercontent.com/u/4095660?v=3&s=100">
-
-James is a Software Engineer at Square and a contributor to the Django project. He created & maintains the RW Django codebase and continually provides guidance for the RealWorld project itself.
-
-#### [Sandeesh S.](https://github.com/sandeesh) - Admin
-
-<img align="left" width="40" height="40" src="https://avatars1.githubusercontent.com/u/16877877?v=3&s=100">
-
-Full stack developer, Laravel enthusiast, Digital marketing specialist and an avid gamer.<br /><br />
-
-# Special thanks to...
-
-RealWorld wouldn't be possible without the help of the open source community reviewing codebases, creating new app implementations, and many other tasks that help push this project forward. We especially appreciate the OSS leaders who have helped contribute to RealWorld:
-
-- **Dan Abramov** (creator of Redux) for  helping [spark the initial idea](https://twitter.com/dan_abramov/status/692009757775896577), [getting the Redux community involved](https://github.com/reactjs/redux/issues/1353), as well as graciously taking the time to provide feedback on the Redux codebase
-- **Max Lynch** (creator of Ionic) for taking the time to provide guidance in the early days of this project
-- **Addy Osmani** (creator of TodoMVC) for helping [spark the initial idea](https://twitter.com/addyosmani/status/762828483433144320) and his amazing work with TodoMVC
-- **TodoMVC** ([team & contributors](https://github.com/tastejs/todomvc#team)) for their exemplary & successful work; their project & org has been an invaluable analogy for us as we've built out RealWorld
-- **James Brewer** (docs contributor to Django) for countless brainstorming sessions, helping name this project, and creating the Django codebase + tutorial
-
-# License
-
-All of the codebases are **MIT licensed** unless otherwise specified.
-
-<br />
-
-[![Brought to you by Thinkster](media/end.png)](https://thinkster.io)
-
+React is [MIT licensed](./LICENSE).
