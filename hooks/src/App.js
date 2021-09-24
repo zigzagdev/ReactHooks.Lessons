@@ -15,9 +15,9 @@ function App() {
     {/*<HookCounterOne/>*/}
     {/*<ClassMouse/>*/}
     {/*<HookMouse/>*/}
-    <MouseContainer/>
-    {/*<IntervalClassCounter/>*/}
-    {/*<IntervalHookCounter/>*/}
+    {/*<MouseContainer/>*/}
+    <IntervalClassCounter/>
+    <IntervalHookCounter/>
   </div>
  )
 }
