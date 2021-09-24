@@ -1,74 +1,141 @@
+# ![RealWorld Example Applications](media/realworld-dual-mode.png)
 
+### Stay on the bleeding edge — [join our GitHub Discussions!](https://github.com/gothinkster/realworld/discussions) 🎉
 
-[![RealWorld Frontend](https://img.shields.io/badge/realworld-frontend-%23783578.svg)](http://realworld.io)
+<p align="center" style="margin-top: 30px;">
+<img src="media/stacks_hr.gif"  />
+</p>
 
-> ### React + Redux codebase containing real world examples (CRUD, auth, advanced patterns, etc) that adheres to the [RealWorld](https://github.com/gothinkster/realworld-example-apps) spec and API.
+<a href="https://demo.realworld.io/"><img src="media/conduit_l.png" align="right" width="250px" /></a>
 
-<a href="https://stackblitz.com/edit/react-redux-realworld" target="_blank"><img width="187" src="https://github.com/gothinkster/realworld/blob/master/media/edit_on_blitz.png?raw=true" /></a>&nbsp;&nbsp;<a href="https://thinkster.io/tutorials/build-a-real-world-react-redux-application" target="_blank"><img width="384" src="https://raw.githubusercontent.com/gothinkster/realworld/master/media/learn-btn-hr.png" /></a>
+### See how *the exact same* Medium.com clone (called [Conduit](https://demo.realworld.io)) is built using different [frontends](https://codebase.show/projects/realworld?category=frontend) and [backends](https://codebase.show/projects/realworld?category=backend). Yes, you can mix and match them, because **they all adhere to the same [API spec](spec/)** 😮😎
 
-### [Demo](https://react-redux.realworld.io)&nbsp;&nbsp;&nbsp;&nbsp;[RealWorld](https://github.com/gothinkster/realworld)
+While most "todo" demos provide an excellent cursory glance at a framework's capabilities, they typically don't convey the knowledge & perspective required to actually build _real_ applications with it.
 
-Originally created for this [GH issue](https://github.com/reactjs/redux/issues/1353). The codebase is now feature complete; please submit bug fixes via pull requests & feedback via issues.
+RealWorld solves this by allowing you to choose any frontend (React, Angular 2, & more) and any backend (Node, Django, & more) and see how they power a real world, beautifully designed fullstack app called "[Conduit](https://demo.realworld.io)".
 
-We also have notes in [**our wiki**](https://github.com/gothinkster/react-redux-realworld-example-app/wiki) about how the various patterns used in this codebase and how they work (thanks [@thejmazz](https://github.com/thejmazz)!)
+*Read the [full blog post announcing RealWorld on Medium.](https://medium.com/@ericsimons/introducing-realworld-6016654d36b5)*
 
+# Implementations
 
-## Getting started
+Over 100 implementations have been created using various languages, libraries, and frameworks.
 
-You can view a live demo over at https://react-redux.realworld.io/
+[**See the list of implementations on the CodebaseShow website >>>**](https://codebase.show/projects/realworld)
 
-To get the frontend running locally:
+# Create a new implementation
 
-- Clone this repo
-- `npm install` to install all req'd dependencies
-- `npm start` to start the local server (this project uses create-react-app)
+[**Create a new implementation >>>**](/spec)
 
-Local web server will use port 4100 instead of standard React's port 3000 to prevent conflicts with some backends like Node or Rails. You can configure port in scripts section of `package.json`: we use [cross-env](https://github.com/kentcdodds/cross-env) to set environment variable PORT for React scripts, this is Windows-compatible way of setting environment variables.
- 
-Alternatively, you can add `.env` file in the root folder of project to set environment variables (use PORT to change webserver's port). This file will be ignored by git, so it is suitable for API keys and other sensitive stuff. Refer to [dotenv](https://github.com/motdotla/dotenv) and [React](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-development-environment-variables-in-env) documentation for more details. Also, please remove setting variable via script section of `package.json` - `dotenv` never override variables if they are already set.  
+Or you can [view upcoming implementations (WIPs)](https://github.com/gothinkster/realworld/discussions/categories/wip-implementations).
 
-### Making requests to the backend API
+# How do I get up & running?
 
-For convenience, we have a live API server running at https://conduit.productionready.io/api for the application to make requests against. You can view [the API spec here](https://github.com/GoThinkster/productionready/blob/master/api) which contains all routes & responses for the server.
+Follow the instructions in the README of whatever frontend and/or backend repo's you want to get up and running.
 
-The source code for the backend server (available for Node, Rails and Django) can be found in the [main RealWorld repo](https://github.com/gothinkster/realworld).
+### Can you teach me how to build each stack from scratch?
 
-If you want to change the API URL to a local server, simply edit `src/agent.js` and change `API_ROOT` to the local server's URL (i.e. `http://localhost:3000/api`)
+Yup! We've built step-by-step tutorials for all of our stacks that teach you how to go from `git init` all the way to the production ready application. [**Start learning now >>>**](https://thinkster.io/tutorials/fullstack)
 
+# Community created resources
 
-## Functionality overview
+Forks, tutorials, workshops, and other resources based on the RealWorld project:
 
-The example application is a social blogging site (i.e. a Medium.com clone) called "Conduit". It uses a custom API for all requests, including authentication. You can view a live demo over at https://redux.productionready.io/
+- [**React+Redux / Node testing workshop**](https://github.com/kentcdodds/testing-workshop) by [**Kent C. Dodds**](https://github.com/kentcdodds)
+  - Example repo showing the React+Redux and Node stacks working together w/ TDD
+  - Live recording of his workshop is [**available on YouTube**](https://www.youtube.com/watch?v=DdqiXcYDv-8)
+- [**RealWorld React/NodeJS E2E Tests**](https://github.com/anishkny/realworld-e2e-test) by [**Anish Karandikar**](https://github.com/anishkny)
+  - A repo showing how to wire [React](https://github.com/gothinkster/react-redux-realworld-example-app) frontend with [NodeJS](https://github.com/gothinkster/node-express-realworld-example-app) backend for a RealWorld fullstack
+  - Includes E2E integration tests that use [Chrome Puppeteer](https://github.com/GoogleChrome/puppeteer) and [Mocha](https://mochajs.org) and work with CI systems like [Travis CI](https://travis-ci.org/anishkny/realworld-e2e-test) and [CircleCI](https://circleci.com/gh/anishkny/realworld-e2e-test)
+  - Also demonstrates usage of [Greenkeeper](https://greenkeeper.io) for automatic dependency updates and [Snyk](https://snyk.io/) for vulnerability monitoring
+- Performance comparisons:
+  - [A Real-World Comparison of Front-End Frameworks with Benchmarks 2020](https://medium.com/dailyjs/a-realworld-comparison-of-front-end-frameworks-2020-4e50655fe4c1)
+  - [A Real-World Comparison of Front-End Frameworks with Benchmarks 2019](https://medium.freecodecamp.org/a-realworld-comparison-of-front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075)
+  - [A Real-World Comparison of Front-End Frameworks with Benchmarks 2018](https://medium.freecodecamp.org/a-real-world-comparison-of-front-end-frameworks-with-benchmarks-2018-update-e5760fb4a962)
+  - [A Real-World Comparison of Front-End Frameworks with Benchmarks 2017](https://medium.freecodecamp.org/a-real-world-comparison-of-front-end-frameworks-with-benchmarks-e1cb62fd526c)
 
-**General functionality:**
+# Learn more
 
-- Authenticate users via JWT (login/signup pages + logout button on settings page)
-- CRU* users (sign up & settings page - no deleting required)
-- CRUD Articles
-- CR*D Comments on articles (no updating required)
-- GET and display paginated lists of articles
-- Favorite articles
-- Follow other users
+- ["Introducing RealWorld 🙌"](https://medium.com/@ericsimons/introducing-realworld-6016654d36b5) by Eric Simons
+- Every tutorial is built against the same [API spec](api/) to ensure modularity of every frontend & backend
+- Every frontend utilizes the same hand crafted [Bootstrap 4 theme](https://github.com/gothinkster/conduit-bootstrap-template) for identical UI/UX
+- There is a hosted version of the backend API available for public usage, no API keys required
+- Interested in creating a new RealWorld stack? View our [starter guide & spec](/spec)
 
-**The general page breakdown looks like this:**
+# Active Maintainers
 
-- Home page (URL: /#/ )
-    - List of tags
-    - List of articles pulled from either Feed, Global, or by Tag
-    - Pagination for list of articles
-- Sign in/Sign up pages (URL: /#/login, /#/register )
-    - Use JWT (store the token in localStorage)
-- Settings page (URL: /#/settings )
-- Editor page to create/edit articles (URL: /#/editor, /#/editor/article-slug-here )
-- Article page (URL: /#/article/article-slug-here )
-    - Delete article button (only shown to article's author)
-    - Render markdown from server client side
-    - Comments section at bottom of page
-    - Delete comment button (only shown to comment's author)
-- Profile page (URL: /#/@username, /#/@username/favorites )
-    - Show basic user info
-    - List of articles populated from author's created articles or author's favorited articles
+#### [Gérôme Grignon](https://github.com/geromegrignon) - Maintainer
+
+<img align="left" width="40" height="40" src="https://avatars.githubusercontent.com/u/32737308?v=4">
+
+Gérôme is a Software Engineer at Sfeir. He's an open source enthusiast.<br /><br />
+
+#### [Manuel Vila](https://github.com/mvila) - Maintainer
+
+<img align="left" width="40" height="40" src="https://avatars.githubusercontent.com/u/381671?v=40">
+
+Manuel is an independent Software Engineer, creator of the [Layr framework](https://layrjs.com) and the [CodebaseShow website](https://codebase.show/).<br /><br />
+
+# Who made this?
+
+RealWorld would not be possible without the [open source community](#special-thanks-to) continuously helping push the project forward. In addition, the former team was composed of:
+
+#### [Anish Karandikar](https://github.com/anishkny) - Core Maintainer
+
+<img align="left" width="40" height="40" src="https://avatars1.githubusercontent.com/u/357499?v=3&s=100">
+
+MathWorker, ex-Google, ex-Computational Fluid Dynamicist, forever lover of tech & humanities ❤️<br /><br />
+
+#### [Cameron Chapman](https://github.com/Cameron-C-Chapman) - Core Maintainer
+
+<img align="left" width="40" height="40" src="https://avatars1.githubusercontent.com/u/1323581?v=3&s=100">
+
+Cameron Chapman is a Software Engineer at FanThreeSixty. He's an open source enthusiast and is helping to teach a local web development boot camp at Kansas University.
+
+#### [Eric Simons](https://twitter.com/ericsimons40) - Founder/Maintainer
+
+<img align="left" width="40" height="40" src="https://avatars1.githubusercontent.com/u/556934?v=3&s=100">
+
+Eric is a Software Engineer, UI Designer, and author of many technical books & tutorials. He oversees the project direction, maintenance and organizes the planning and development efforts of the team.
+
+#### [Albert Pai](https://twitter.com/iamalbertpai) - Founder/Maintainer
+
+<img align="left" width="40" height="40" src="https://avatars0.githubusercontent.com/u/1776432?v=3&s=100">
+
+Albert is a Software Engineer, DevOps ninja, and author of many technical books & tutorials. He oversees the project direction, maintenance and organizes the planning and development efforts of the team.
+
+#### [Thinkster](https://twitter.com/gothinkster) - Funding/Support
+
+<img align="left" width="40" height="40" src="https://avatars0.githubusercontent.com/u/8601733?v=3&s=100">
+
+[Thinkster](https://thinkster.io) creates high quality resources that help Javascript developers succeed. The RealWorld project wouldn't exist without their funding, so please consider investing in [a Pro subscription](https://thinkster.io/pro) to help support us!
+
+#### [James Brewer](https://twitter.com/brwr_) - Admin
+
+<img align="left" width="40" height="40" src="https://avatars1.githubusercontent.com/u/4095660?v=3&s=100">
+
+James is a Software Engineer at Square and a contributor to the Django project. He created & maintains the RW Django codebase and continually provides guidance for the RealWorld project itself.
+
+#### [Sandeesh S.](https://github.com/sandeesh) - Admin
+
+<img align="left" width="40" height="40" src="https://avatars1.githubusercontent.com/u/16877877?v=3&s=100">
+
+Full stack developer, Laravel enthusiast, Digital marketing specialist and an avid gamer.<br /><br />
+
+# Special thanks to...
+
+RealWorld wouldn't be possible without the help of the open source community reviewing codebases, creating new app implementations, and many other tasks that help push this project forward. We especially appreciate the OSS leaders who have helped contribute to RealWorld:
+
+- **Dan Abramov** (creator of Redux) for  helping [spark the initial idea](https://twitter.com/dan_abramov/status/692009757775896577), [getting the Redux community involved](https://github.com/reactjs/redux/issues/1353), as well as graciously taking the time to provide feedback on the Redux codebase
+- **Max Lynch** (creator of Ionic) for taking the time to provide guidance in the early days of this project
+- **Addy Osmani** (creator of TodoMVC) for helping [spark the initial idea](https://twitter.com/addyosmani/status/762828483433144320) and his amazing work with TodoMVC
+- **TodoMVC** ([team & contributors](https://github.com/tastejs/todomvc#team)) for their exemplary & successful work; their project & org has been an invaluable analogy for us as we've built out RealWorld
+- **James Brewer** (docs contributor to Django) for countless brainstorming sessions, helping name this project, and creating the Django codebase + tutorial
+
+# License
+
+All of the codebases are **MIT licensed** unless otherwise specified.
 
 <br />
 
-[![Brought to you by Thinkster](https://raw.githubusercontent.com/gothinkster/realworld/master/media/end.png)](https://thinkster.io)
+[![Brought to you by Thinkster](media/end.png)](https://thinkster.io)
+
